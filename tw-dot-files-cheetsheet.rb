@@ -13,30 +13,30 @@ cheatsheet do
     entry do
       command 'git l'
       command 'git gl'
-      name 'a much more useable git log'
+      name 'A much more useable git log'
     end
 
     entry do
       command 'git b'
       command 'gb'
-      name 'a list of branches with summary of last commit'
+      name 'A list of branches with summary of last commit'
     end
 
     entry do
       command 'git r'
-      name 'a list of remotes with information'
+      name 'A list of remotes with information'
     end
 
     entry do
       command 'git t'
       command 'gt'
-      name 'a list of tags iwth information'
+      name 'A` list of tags iwth information'
     end
 
     entry do
       command 'git nb'
       command 'gnb'
-      name 'a (n)ew (b)ranch'
+      name '(n)ew (b)ranch'
       notes 'like git checkout -b'
     end
 
@@ -49,18 +49,18 @@ cheatsheet do
 
     entry do
       command 'git simple'
-      name 'a clean format for creating changelogs'
+      name 'A clean format for creating changelogs'
     end
 
     entry do
       command 'git recent-branches'
-      name 'if you forgot what you\'ve been working on'
+      name 'If you forgot what you\'ve been working on'
     end
 
     entry do
       command 'git unstage'
       command 'guns'
-      name 'remove from index'
+      name 'Remove from index'
     end
 
     entry do
@@ -81,16 +81,16 @@ cheatsheet do
     id 'Navigation'  # Must be unique and is used as title of the category
     entry do
       command ',z'
-      name 'go to previous buffer'
+      name 'Go to previous buffer'
     end
     entry do
       command ',x'
-      name 'go to next buffer'
+      name 'Go to next buffer'
     end
     entry do
       command 'Cmd-j'
       command 'Cmd-k'
-      name 'to move up and down roughly by functions'
+      name 'To move up and down roughly by functions'
     end
     entry do
       command 'Ctrl-o'
@@ -107,17 +107,17 @@ cheatsheet do
 
     entry do
       command ',f'
-      name 'instantly Find definition of class'
+      name 'Instantly Find definition of class'
       notes 'Must have exuberant ctags installed'
     end
     entry do
       command ',F'
-      name 'instantly Find definition of class and put in a vertical split'
+      name 'Instantly Find definition of class and put in a vertical split'
     end
     entry do
       command ',gf'
       command 'Ctrl-f'
-      name 'same as vim normal gf (go to file), but in a vertical split'
+      name 'Same as vim normal gf (go to file), but in a vertical split'
     end
     entry do
       command 'K'
@@ -126,7 +126,54 @@ cheatsheet do
     entry do
       command ',K'
       name 'Grep the current word up to next exclamation point'
+    end
+    entry do
+      command 'Cmd-*'
+      name 'Highlight all occurrences of a current word'
       notes 'Similar to regular * except doesn\'t move'
+    end
+    entry do
+      command ',hl'
+      name 'Toggle search highlight on and off'
+    end
+    entry do
+      command ',gg'
+      command ',ag'
+      name 'Grep command line, type between quotes'
+      notes 'Uses Ag Silver Searcher'
+    end
+    entry do
+      command ',gd'
+      name 'Grep def when cursor is over the function name'
+      notes 'Greps for def \[function name\]'
+    end
+    entry do
+      command ',gcf'
+      name 'Grep current file to find references to the current file'
+    end
+    entry do
+      command '//'
+      name 'Clear the search'
+    end
+    entry do
+      command ',,w'
+      command ',Esc'
+      command ',,b'
+      command ',Shift-Esc'
+      name 'Foward EasyMotion, a vimperator style tool that highlights jump points on the screen and lets you type there'
+    end
+    entry do
+      command ',mc'
+      name 'Mark this word for MultiCursor.'
+      notes 'Ctrl-n (next), Ctrl-p (prev), Ctrl-x (skip) to add more cursors, then do normal vim things like edit the word'
+    end
+    entry do
+      command 'gK'
+      name 'Opens the documentation for the word under the cursor'
+    end
+    entry do
+      command ':Gsearch foo'
+      name 'Global search, then do your normal %s/search/replace/g and follow up with :Greplace to replace across all files. When done use :wall to write all the files'
     end
   end
 end
