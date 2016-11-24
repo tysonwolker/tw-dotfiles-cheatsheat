@@ -102,4 +102,31 @@ cheatsheet do
     end
   end
 
+  category do
+    id 'Code Search/Navigation'
+
+    entry do
+      command ',f'
+      name 'instantly Find definition of class'
+      notes 'Must have exuberant ctags installed'
+    end
+    entry do
+      command ',F'
+      name 'instantly Find definition of class and put in a vertical split'
+    end
+    entry do
+      command ',gf'
+      command 'Ctrl-f'
+      name 'same as vim normal gf (go to file), but in a vertical split'
+    end
+    entry do
+      command 'K'
+      name 'Search the current word under the cursor and show results in quickfix window'
+    end
+    entry do
+      command ',K'
+      name 'Grep the current word up to next exclamation point'
+      notes 'Similar to regular * except doesn\'t move'
+    end
+  end
 end
